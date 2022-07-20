@@ -1,0 +1,84 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/home/saranya/my-app/app/models/comment.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/home/saranya/my-app/spec/models/post_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          2,
+          null,
+          2,
+          null,
+          null,
+          1,
+          2,
+          null,
+          2,
+          null,
+          null,
+          1,
+          2,
+          null,
+          2,
+          null,
+          1,
+          2,
+          2,
+          null,
+          null,
+          null,
+          1,
+          1,
+          2,
+          null,
+          1,
+          1,
+          2,
+          null,
+          1,
+          1,
+          2,
+          null,
+          1,
+          2,
+          null,
+          null,
+          null
+        ]
+      },
+      "/home/saranya/my-app/app/models/post.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/home/saranya/my-app/spec/models/user_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null,
+          null
+        ]
+      }
+    },
+    "timestamp": 1658316432
+  }
+}

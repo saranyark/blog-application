@@ -17,7 +17,7 @@ RSpec.describe Post, type: :model do
     end
 
     context 'length of title and description' do
-      it { should validate_length_of(:title).is_at_least(3).is_at_most(10) }
+      it { should validate_length_of(:title).is_at_least(3).is_at_most(20) }
       it { should validate_length_of(:description).is_at_least(10).is_at_most(100) }
     end
 
@@ -31,7 +31,7 @@ RSpec.describe Post, type: :model do
       it { is_expected.not_to be_valid }
     end
 
-    context 'if length of title greater than 10' do
+    context 'if length of title greater than 20' do
       let(:post) { build :post, title: 'post title not valid' } 
       it { is_expected.not_to be_valid }
     end

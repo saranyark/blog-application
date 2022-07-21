@@ -3,13 +3,13 @@ FactoryBot.define do
       id {1}
       title {"title"}
       description {"description"}
-      
+     
     
     end
     factory :comment do
-        id {1}
+        id {2}
         body {"comment body"}
         post
-       
+
       end
 end

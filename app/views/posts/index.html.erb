@@ -20,9 +20,11 @@
         <td><%= post.description %></td>
         <td>
           <%= link_to t('.show', :default => t("helpers.links.show")),
-                      post_path(post), :class => 'btn btn-default btn-xs' %>
+                      post_path(post), :class => 'btn btn-default btn-success' %>
+      <%if current_user&&current_user.is_admin?%>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_post_path(post), :class => 'btn btn-default btn-xs' %>
+                      <%end%>
           
         </td>
       </tr>
@@ -30,6 +32,3 @@
   </tbody>
 </table>
 
-<%= link_to t('.new', :default => t("helpers.links.new")),
-            new_post_path,
-            :class => 'btn btn-primary' %>

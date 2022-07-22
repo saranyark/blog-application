@@ -75,6 +75,7 @@ RSpec.describe 'Posts', type: :request do
       it "renders a successful response (i.e. to display the 'edit' template)" do
        post = Post.create! valid_attributes
         patch post_url(post), params: {post: invalid_attributes }
+        expect(response.status).to eq 422
         expect(response).to_not render_template(:show)
       end
     end

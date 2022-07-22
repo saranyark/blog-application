@@ -1,0 +1,39 @@
+<nav class="navbar navbar-inverse">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">BLOG APP</a>
+    </div>
+    <ul class="nav navbar-nav">
+     <li>
+          <%= link_to('HOME', root_path, title: 'home page') %>
+        </li>
+    <% if current_user && current_user.is_admin? %>
+      <li><%= link_to "<i class='fa fa-users'></i> Add Posts".html_safe,
+                      new_post_path,
+                      class: 'navbar-link btn btn' %></li>
+      
+      <li><%= link_to "View User" ,users_path, class: 'navbar-link btn btn' %></li>
+    </ul>
+    <%end%>
+    
+    <ul class="nav navbar-nav navbar-right">
+    
+     
+      <% if current_user %>
+      <li >
+          <%= link_to('EDIT PROFILE', edit_user_registration_path, title: 'edit profile') %>
+        </li>
+      <li> <%= link_to "SIGN OUT" ,destroy_user_session_path, :method => :delete ,class: "btn btn-xs btn-danger" %> </li> 
+      <%else%>
+       
+       <li >
+          <%= link_to('Sign In', new_user_session_path, title: 'Sign In') %>
+        </li>
+         <li >
+          <%= link_to('Sign up', new_user_registration_path, title: 'Sign up') %>
+        </li>
+      
+    </ul>
+  </div>
+  <% end%>
+</nav>
